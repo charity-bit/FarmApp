@@ -1,0 +1,5 @@
+*.g linguist-language=c#
+* linguist-vendored
+*.cs linguist-vendored=false
+
+
