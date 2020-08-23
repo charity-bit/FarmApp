@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             xmlns:custom="clr-namespace:FarmApp.CustomRenderers"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="FarmApp.views.Login"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>   
+            <StackLayout Margin="30,125,30,0" Padding="0">
+            <Label Text="Hello" FontSize="26" FontFamily="Medium"
+                   TextColor="{StaticResource Black}" HorizontalOptions="Fill" />
+            <Label FontSize="14" FontFamily="Regular"
+                Text="Login with your username or mobile number"  TextColor="{StaticResource Black}"
+                   HorizontalOptions="Fill" />
+           
+            <sh:Shadows CornerRadius="30" 
+                            Shades="{sh:NeumorphismShades}">
+
+
+
+                <pancake:PancakeView Margin="0,40,0,0"  BackgroundColor="White"
+                                 CornerRadius="10" HasShadow="True" >
+
+                    <StackLayout Orientation="Horizontal" Spacing="20">
+                            <Frame HasShadow="True" Padding="0" VerticalOptions="Center"
+                               HeightRequest="50" WidthRequest="50" CornerRadius="25"
+                               HorizontalOptions="Start" >
+                                <Image Source="user" WidthRequest="22.38" HeightRequest="25"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Frame>
+                       
+                        <StackLayout Orientation="Vertical" Padding="0" Spacing="2">
+                            <Label Text="Mobile Number" TextColor="{StaticResource Gray1}"/>
+                            <custom:myEntry Keyboard="Numeric" Placeholder="+91 8000541833" TextColor="{StaticResource Black}"
+                                        PlaceholderColor="{StaticResource Black}" />
+                        </StackLayout>
+
+                    </StackLayout>
+
+                
+
+                  </pancake:PancakeView>
+                
+            </sh:Shadows>
+
+                <sh:Shadows    CornerRadius="30" 
+                            Shades="{sh:NeumorphismShades}" >
+                <pancake:PancakeView Margin="0,28,0,0"  BackgroundColor="White"
+                                 CornerRadius="10" HasShadow="True" >
+
+                <StackLayout Orientation="Horizontal" Spacing="20">
+                        <Frame HasShadow="True" Padding="0" VerticalOptions="Center"
+                               HeightRequest="50" WidthRequest="50" CornerRadius="25"
+                               HorizontalOptions="Start" >
+                            <Image Source="lock" WidthRequest="17.65" HeightRequest="25" 
+                                   HorizontalOptions="Center" 
+                                   VerticalOptions="Center"/>
+                        </Frame>
+
+                        <StackLayout Orientation="Vertical" Padding="0" Spacing="2">
+                        <Label Text="Password" TextColor="{StaticResource Gray1}"/>
+                        <custom:myEntry Keyboard="Numeric" Placeholder="********" 
+                                        TextColor="{StaticResource Black}"
+                                        PlaceholderColor="{StaticResource Black}" />
+                    </StackLayout>
+                        <Image Source="eye"  Margin="0,0,10,0"
+                               HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+
+
+
+            </pancake:PancakeView>
+
+                </sh:Shadows>
+
+            <Button Text="LOGIN" x:Name="LoginBtn"
+                    Margin="0,35,0,0" FontSize="18" TextColor="White"
+                    HorizontalOptions="Fill"  CornerRadius="10" Clicked="LoginBtn_Clicked"
+               BackgroundColor="{StaticResource Orange}" />
+
+            <Label FontSize="12" Margin="0,16,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Create new account. Register?" TextColor="{StaticResource Black}" />
+                        <Span Text="             "/>
+                        <Span Text="Forget Password" TextColor="{StaticResource Green}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Forget_Tapped" />
+                    </Label.GestureRecognizers>
+            </Label>
+
+
+
+
+
+
+
+        </StackLayout>
+
+
+
+            <Image Source="grass.png" VerticalOptions="EndAndExpand"
+                   Aspect="AspectFill" HeightRequest="73" WidthRequest="377" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

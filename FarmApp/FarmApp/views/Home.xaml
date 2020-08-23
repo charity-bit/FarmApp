@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             NavigationPage.HasBackButton="False"
+             mc:Ignorable="d"
+             x:Class="FarmApp.views.Home">
+   
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"  >
+            <StackLayout Spacing="0" >
+
+
+                    <pancake:PancakeView HeightRequest="105"  
+                                     CornerRadius="0,0,0,30" 
+                                     >
+                    <pancake:PancakeView.BackgroundGradientStops>
+                        <pancake:GradientStop Color="#24BF59" />
+                        <pancake:GradientStop Color="#2CAC58" />
+                      </pancake:PancakeView.BackgroundGradientStops>
+                    <Grid ColumnDefinitions="48,118,1*" Margin="30,0" ColumnSpacing="15">
+                        <Image Source="person" Aspect="AspectFill" 
+                               VerticalOptions="Center"    
+                               WidthRequest="40" HeightRequest="40" 
+                               HorizontalOptions="Start"/>
+                        <Label Text="Hi PiyusyG" FontSize="16" 
+                               FontAttributes="Bold" HeightRequest="40"
+                               Grid.Column="1" VerticalOptions="Center" TextColor="White" />
+                        <Label Text="Vimannagar" FontSize="12" Margin="0,20,0,0" 
+                               Grid.Column="1" VerticalOptions="Center" TextColor="White" />
+                        <Image Source="hello" Grid.Column="1" HorizontalOptions="End"
+                               VerticalOptions="Center" HeightRequest="40" Margin="0,0,10,20"/>
+                        <Image Source="menu" Grid.Column="2" HorizontalOptions="End" />
+
+                    </Grid>
+                    </pancake:PancakeView>
+                              
+                    <pancake:PancakeView HeightRequest="420" HasShadow="True" 
+                                         Opacity="0.8"  CornerRadius="0,0,0,30"
+                                         Margin="0,-30,0,0">
+                <pancake:PancakeView.BackgroundGradientStops>
+                    <pancake:GradientStop Color="#24BF59" />
+                    <pancake:GradientStop Color="#2CAC58" />
+                </pancake:PancakeView.BackgroundGradientStops>
+            <Grid ColumnDefinitions="1*,1*,1*" Margin="30,60,30,0"
+                  RowDefinitions="1*,1*" RowSpacing="0"
+                  ColumnSpacing="20" >
+
+                        <Frame HorizontalOptions="Center" CornerRadius="10" Padding="0"
+                               HeightRequest="98" WidthRequest="98" HasShadow="True"
+                               VerticalOptions="Start">
+
+                            <Image Source="farmer" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Label Text="Add Farmer" FontSize="13" VerticalOptions="Center" 
+                               TextColor="White" Margin="0,70,0,0">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Label.GestureRecognizers>
+                            
+                            
+                        </Label>
+                        <Frame Grid.Column="1" CornerRadius="10"
+                               HorizontalOptions="Center" Padding="0"
+                               HeightRequest="98" WidthRequest="98" HasShadow="True"
+                               
+                               VerticalOptions="Start">
+                            <Image Source="tasks" VerticalOptions="Center" HorizontalOptions="Center" />
+
+                        </Frame>
+                        <Label Text="Farmer List" Grid.Column="1"
+                               FontSize="13" VerticalOptions="Center" 
+                               TextColor="White" Margin="0,70,0,0"/>
+
+                        <Frame Grid.Column="2" HeightRequest="98" CornerRadius="10"
+                               Padding="0"
+                               WidthRequest="98" HasShadow="True"
+                               
+                               VerticalOptions="Start" HorizontalOptions="Center">
+                            <Image Source="flat"
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="Center" />
+
+
+                        </Frame>
+                        <Frame  Grid.Row="1" CornerRadius="10" Padding="0"
+                                HorizontalOptions="Center" HeightRequest="98" 
+                                WidthRequest="98" HasShadow="True"
+                               
+                               VerticalOptions="Start">
+                            <Image Source="countryside"
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="Center" />
+
+                        </Frame>
+                        <Label Text="Personal info" Grid.Column="2"
+                               FontSize="13" VerticalOptions="Center" 
+                               TextColor="White" Margin="0,70,0,0"/>
+                        <Label Text="Farm Details" Grid.Row="1" Grid.Column="0"
+                               FontSize="13" VerticalOptions="Center" 
+                               TextColor="White" Margin="0,70,0,0"/>
+                        <Label Text="Bank Details" Grid.Row="1"  Grid.Column="1"
+                               FontSize="13" VerticalOptions="Center" 
+                               TextColor="White" Margin="0,70,0,0"/>
+                        <Label Text="Product Details" Grid.Row="1" Grid.Column="2"
+                               FontSize="12" VerticalOptions="Center" 
+                               TextColor="White" Margin="0,70,0,0"/>
+
+
+
+
+                        <Frame Grid.Column="1" CornerRadius="10" Padding="0"
+                               Grid.Row="1" HeightRequest="98" WidthRequest="98" HasShadow="True"
+                               
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Image Source="bank"
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="Center" />
+
+
+                        </Frame>
+                        <Frame Grid.Column="2" CornerRadius="10"  
+                               Grid.Row="1" HeightRequest="98" Padding="0"
+                               WidthRequest="98" HasShadow="True"
+                               
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Image Source="plant" HeightRequest="50" WidthRequest="50"
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="Center" />
+
+                        </Frame>
+
+
+
+
+                    </Grid>
+            </pancake:PancakeView>
+
+
+                </StackLayout>
+            
+            <StackLayout Margin="30,10,30,0">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                <Label Text="Farm Details" TextColor="{StaticResource Black}" 
+                       FontSize="18" VerticalOptions="Center"/>
+                    <Label Text="View All" VerticalOptions="Center"
+                       TextColor="{StaticResource Orange}" HorizontalOptions="EndAndExpand"
+                       FontSize="14" FontFamily="Regular" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Image Source="polygon2" VerticalOptions="Center" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                        
+                      
+                        <Frame HasShadow="True"   
+                                        CornerRadius="10" 
+                                             BackgroundColor="White">
+                            <Grid ColumnDefinitions="80,180" 
+                                  RowDefinitions="20,*"  VerticalOptions="Center"
+                                  ColumnSpacing="20" RowSpacing="0">
+                                <Image Source="farmerImage"  HeightRequest="50"  Grid.RowSpan="2"
+                                       WidthRequest="50" VerticalOptions="StartAndExpand" 
+                                         />
+                                <Label Grid.Column="1"  Text="Rainy Gandhi"
+                                       VerticalOptions="Start"  />
+                                <Label Text="Farmer ID" FontAttributes="Bold" Grid.Column="1"
+                                       HorizontalOptions="Start" Grid.Row="1"
+                                      />
+                                <Label Text="125211" Margin="0,20,0,0" TextColor="{StaticResource Green}"
+                                       Grid.Row="1" Grid.Column="1" />
+                                <Label Text="Status" FontAttributes="Bold" Grid.Column="1"
+                                       HorizontalOptions="Center" Grid.Row="1"
+                                       HorizontalTextAlignment="End" />
+                                <Label Text="Approved" HorizontalTextAlignment="End"
+                                       TextColor="{StaticResource Green}"
+                                       Grid.Column="1" Margin="10,20,0,0"
+                                       HorizontalOptions="Center" Grid.Row="1" />
+
+
+
+                            </Grid>
+
+                         </Frame>
+                    </StackLayout>
+                
+            
+          
+        
+        </StackLayout>
+        </ContentPage.Content>
+</ContentPage>
